@@ -1,0 +1,617 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="literal__util__test_8cc" kind="file" language="C++">
+    <compoundname>literal_util_test.cc</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes local="no">limits</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">string_view</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">arrow/array.h</includes>
+    <includes local="no">arrow/buffer.h</includes>
+    <includes local="no">arrow/extension/uuid.h</includes>
+    <includes local="no">arrow/scalar.h</includes>
+    <includes local="no">arrow/type.h</includes>
+    <includes local="no">gmock/gmock.h</includes>
+    <includes local="no">gtest/gtest.h</includes>
+    <includes refid="literal__util__internal_8h" local="yes">iceberg/arrow/literal_util_internal.h</includes>
+    <includes refid="literal_8h" local="yes">iceberg/expression/literal.h</includes>
+    <includes refid="matchers_8h" local="yes">iceberg/test/matchers.h</includes>
+    <includes refid="type_8h" local="yes">iceberg/type.h</includes>
+    <includes refid="uuid_8h" local="yes">iceberg/util/uuid.h</includes>
+    <incdepgraph>
+      <node id="15">
+        <label>iceberg/arrow/literal_util_internal.h</label>
+        <link refid="literal__util__internal_8h_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>iceberg/exception.h</label>
+        <link refid="exception_8h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>iceberg/expression/literal.h</label>
+        <link refid="literal_8h_source"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>iceberg/iceberg_export.h</label>
+        <link refid="iceberg__export_8h_source"/>
+      </node>
+      <node id="21">
+        <label>iceberg/result.h</label>
+        <link refid="result_8h_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>iceberg/schema_field.h</label>
+        <link refid="schema__field_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>iceberg/test/literal_util_test.cc</label>
+        <link refid="literal__util__test_8cc"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="46" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>iceberg/test/matchers.h</label>
+        <link refid="matchers_8h_source"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>iceberg/type.h</label>
+        <link refid="type_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>iceberg/type_fwd.h</label>
+        <link refid="type__fwd_8h"/>
+      </node>
+      <node id="42">
+        <label>iceberg/util/decimal.h</label>
+        <link refid="decimal_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="43" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>iceberg/util/formattable.h</label>
+        <link refid="formattable_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="44">
+        <label>iceberg/util/int128.h</label>
+        <link refid="int128_8h"/>
+      </node>
+      <node id="34">
+        <label>iceberg/util/lazy.h</label>
+        <link refid="lazy_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>iceberg/util/macros.h</label>
+        <link refid="macros_8h_source"/>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>iceberg/util/uuid.h</label>
+        <link refid="uuid_8h"/>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>array</label>
+      </node>
+      <node id="8">
+        <label>arrow/array.h</label>
+      </node>
+      <node id="9">
+        <label>arrow/buffer.h</label>
+      </node>
+      <node id="10">
+        <label>arrow/extension/uuid.h</label>
+      </node>
+      <node id="11">
+        <label>arrow/scalar.h</label>
+      </node>
+      <node id="12">
+        <label>arrow/type.h</label>
+      </node>
+      <node id="16">
+        <label>arrow/type_fwd.h</label>
+      </node>
+      <node id="39">
+        <label>cassert</label>
+      </node>
+      <node id="18">
+        <label>compare</label>
+      </node>
+      <node id="22">
+        <label>concepts</label>
+      </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="23">
+        <label>expected</label>
+      </node>
+      <node id="24">
+        <label>format</label>
+      </node>
+      <node id="35">
+        <label>functional</label>
+      </node>
+      <node id="13">
+        <label>gmock/gmock.h</label>
+      </node>
+      <node id="14">
+        <label>gtest/gtest.h</label>
+      </node>
+      <node id="43">
+        <label>iosfwd</label>
+      </node>
+      <node id="3">
+        <label>limits</label>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+      <node id="36">
+        <label>mutex</label>
+      </node>
+      <node id="28">
+        <label>optional</label>
+      </node>
+      <node id="29">
+        <label>span</label>
+      </node>
+      <node id="41">
+        <label>stdexcept</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>string_view</label>
+      </node>
+      <node id="25">
+        <label>type_traits</label>
+      </node>
+      <node id="30">
+        <label>unordered_map</label>
+      </node>
+      <node id="37">
+        <label>utility</label>
+      </node>
+      <node id="19">
+        <label>variant</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceiceberg">iceberg</innernamespace>
+    <innernamespace refid="namespaceiceberg_1_1arrow">iceberg::arrow</innernamespace>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="literal__util__test_8cc_1a4d9f5825bc03011a856a1aa3470ea6f4" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string test_name</definition>
+        <argsstring></argsstring>
+        <name>test_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="iceberg/test/literal_util_test.cc" line="46" column="15" bodyfile="iceberg/test/literal_util_test.cc" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="literal__util__test_8cc_1af63dcc00f2023fdf498e0829e6fb8a6b" prot="public" static="no" mutable="no">
+        <type>Literal</type>
+        <definition>Literal literal</definition>
+        <argsstring></argsstring>
+        <name>literal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="iceberg/test/literal_util_test.cc" line="47" column="11" bodyfile="iceberg/test/literal_util_test.cc" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="literal__util__test_8cc_1a713eb9e1d888ac86143a1553e5d82847" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt;::arrow::Scalar &gt;</type>
+        <definition>std::shared_ptr&lt;::arrow::Scalar&gt; expected</definition>
+        <argsstring></argsstring>
+        <name>expected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="iceberg/test/literal_util_test.cc" line="48" column="19" bodyfile="iceberg/test/literal_util_test.cc" bodystart="48" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Licensed<sp/>to<sp/>the<sp/>Apache<sp/>Software<sp/>Foundation<sp/>(ASF)<sp/>under<sp/>one</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>or<sp/>more<sp/>contributor<sp/>license<sp/>agreements.<sp/><sp/>See<sp/>the<sp/>NOTICE<sp/>file</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/>distributed<sp/>with<sp/>this<sp/>work<sp/>for<sp/>additional<sp/>information</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>regarding<sp/>copyright<sp/>ownership.<sp/><sp/>The<sp/>ASF<sp/>licenses<sp/>this<sp/>file</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>to<sp/>you<sp/>under<sp/>the<sp/>Apache<sp/>License,<sp/>Version<sp/>2.0<sp/>(the</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>&quot;License&quot;);<sp/>you<sp/>may<sp/>not<sp/>use<sp/>this<sp/>file<sp/>except<sp/>in<sp/>compliance</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>with<sp/>the<sp/>License.<sp/><sp/>You<sp/>may<sp/>obtain<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>License<sp/>at</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/><sp/><sp/>http://www.apache.org/licenses/LICENSE-2.0</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>Unless<sp/>required<sp/>by<sp/>applicable<sp/>law<sp/>or<sp/>agreed<sp/>to<sp/>in<sp/>writing,</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>software<sp/>distributed<sp/>under<sp/>the<sp/>License<sp/>is<sp/>distributed<sp/>on<sp/>an</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*<sp/>&quot;AS<sp/>IS&quot;<sp/>BASIS,<sp/>WITHOUT<sp/>WARRANTIES<sp/>OR<sp/>CONDITIONS<sp/>OF<sp/>ANY</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>KIND,<sp/>either<sp/>express<sp/>or<sp/>implied.<sp/><sp/>See<sp/>the<sp/>License<sp/>for<sp/>the</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>specific<sp/>language<sp/>governing<sp/>permissions<sp/>and<sp/>limitations</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>under<sp/>the<sp/>License.</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;limits&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string_view&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arrow/array.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arrow/buffer.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arrow/extension/uuid.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arrow/scalar.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;arrow/type.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gmock/gmock.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gtest/gtest.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;iceberg/arrow/literal_util_internal.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;iceberg/expression/literal.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;iceberg/test/matchers.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="type_8h" kindref="compound">iceberg/type.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="uuid_8h" kindref="compound">iceberg/util/uuid.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">iceberg::arrow<sp/>{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">ToArrowScalarParam<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/>std::string<sp/>test_name;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/>Literal<sp/>literal;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/>std::shared_ptr&lt;::arrow::Scalar&gt;<sp/>expected;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">ToArrowScalarTest<sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>::testing::TestWithParam&lt;ToArrowScalarParam&gt;<sp/>{};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">TEST_P(ToArrowScalarTest,<sp/>ConvertsTypeAndValue)<sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>param<sp/>=<sp/>GetParam();</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/>ICEBERG_UNWRAP_OR_FAIL(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>scalar,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalar(param.literal,<sp/>::arrow::default_memory_pool()));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/>ASSERT_TRUE(scalar-&gt;type-&gt;Equals(*param.expected-&gt;type))</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;actual<sp/>type:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>scalar-&gt;type-&gt;ToString();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/>ASSERT_TRUE(scalar-&gt;Equals(*param.expected))<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;actual<sp/>value:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>scalar-&gt;ToString();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">std::shared_ptr&lt;::arrow::Buffer&gt;<sp/>BufferOf(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;uint8_t&gt;&amp;<sp/>bytes)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>return<sp/>::arrow::Buffer::FromString(std::string(bytes.begin(),<sp/>bytes.end()));</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;uint8_t&gt;<sp/>kUuidBytes<sp/>=<sp/>{0xF7,<sp/>0x9C,<sp/>0x3E,<sp/>0x09,<sp/>0x67,<sp/>0x7C,<sp/>0x4B,<sp/>0xBD,</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0xA4,<sp/>0x79,<sp/>0x3F,<sp/>0x34,<sp/>0x9C,<sp/>0xB7,<sp/>0x85,<sp/>0xE7};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">INSTANTIATE_TEST_SUITE_P(</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>AllPrimitiveTypes,<sp/>ToArrowScalarTest,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>::testing::Values(</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight><highlight class="stringliteral">&quot;Boolean&quot;</highlight><highlight class="normal">,<sp/><ref refid="classiceberg_1_1Literal_1ada29f73dbb21bde3e3da88e70ec56be3" kindref="member">Literal::Boolean</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::BooleanScalar&gt;(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)},</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight><highlight class="stringliteral">&quot;Int&quot;</highlight><highlight class="normal">,<sp/>Literal::Int(42),</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::Int32Scalar&gt;(42)},</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight><highlight class="stringliteral">&quot;Long&quot;</highlight><highlight class="normal">,<sp/>Literal::Long(42),</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::Int64Scalar&gt;(42)},</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight><highlight class="stringliteral">&quot;Float&quot;</highlight><highlight class="normal">,<sp/>Literal::Float(1.5F),</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::FloatScalar&gt;(1.5F)},</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight><highlight class="stringliteral">&quot;Double&quot;</highlight><highlight class="normal">,<sp/>Literal::Double(2.5),</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::DoubleScalar&gt;(2.5)},</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight><highlight class="stringliteral">&quot;String&quot;</highlight><highlight class="normal">,<sp/>Literal::String(</highlight><highlight class="stringliteral">&quot;iceberg&quot;</highlight><highlight class="normal">),</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::StringScalar&gt;(</highlight><highlight class="stringliteral">&quot;iceberg&quot;</highlight><highlight class="normal">)},</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Binary&quot;</highlight><highlight class="normal">,<sp/>Literal::Binary({0x01,<sp/>0x02}),</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::BinaryScalar&gt;(BufferOf({0x01,<sp/>0x02}))},</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight><highlight class="stringliteral">&quot;Fixed&quot;</highlight><highlight class="normal">,<sp/>Literal::Fixed({0xAB,<sp/>0xCD}),</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::FixedSizeBinaryScalar&gt;(</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BufferOf({0xAB,<sp/>0xCD}),<sp/>::arrow::fixed_size_binary(2))},</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight><highlight class="stringliteral">&quot;Uuid&quot;</highlight><highlight class="normal">,<sp/>Literal::UUID(<ref refid="classiceberg_1_1Uuid_1ac1b2a8703d0041b88cbcfa84e4a9a1a1" kindref="member">Uuid::FromBytes</ref>(kUuidBytes).value()),</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::FixedSizeBinaryScalar&gt;(</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BufferOf(kUuidBytes),<sp/>::arrow::fixed_size_binary(16))},</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Decimal&quot;</highlight><highlight class="normal">,<sp/><ref refid="classiceberg_1_1Literal_1adee20c80370bc1256e52a25b6b68e831" kindref="member">Literal::Decimal</ref>(12345,<sp/></highlight><highlight class="comment">/*precision=*/</highlight><highlight class="normal">9,<sp/></highlight><highlight class="comment">/*scale=*/</highlight><highlight class="normal">2),</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::Decimal128Scalar&gt;(::arrow::Decimal128(12345),</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::arrow::decimal128(9,<sp/>2))},</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;NegativeDecimal&quot;</highlight><highlight class="normal">,<sp/><ref refid="classiceberg_1_1Literal_1adee20c80370bc1256e52a25b6b68e831" kindref="member">Literal::Decimal</ref>(-12345,<sp/></highlight><highlight class="comment">/*precision=*/</highlight><highlight class="normal">9,<sp/></highlight><highlight class="comment">/*scale=*/</highlight><highlight class="normal">2),</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::Decimal128Scalar&gt;(::arrow::Decimal128(-12345),</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::arrow::decimal128(9,<sp/>2))},</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight><highlight class="stringliteral">&quot;Date&quot;</highlight><highlight class="normal">,<sp/>Literal::Date(19000),</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::Date32Scalar&gt;(19000)},</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight><highlight class="stringliteral">&quot;Time&quot;</highlight><highlight class="normal">,<sp/>Literal::Time(3600000000),</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::Time64Scalar&gt;(</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3600000000,<sp/>::arrow::time64(::arrow::TimeUnit::MICRO))},</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Timestamp&quot;</highlight><highlight class="normal">,<sp/>Literal::Timestamp(1672531200000000),</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::TimestampScalar&gt;(</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1672531200000000,<sp/>::arrow::timestamp(::arrow::TimeUnit::MICRO))},</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight><highlight class="stringliteral">&quot;TimestampTz&quot;</highlight><highlight class="normal">,<sp/>Literal::TimestampTz(1672531200000000),</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::TimestampScalar&gt;(</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1672531200000000,</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::arrow::timestamp(::arrow::TimeUnit::MICRO,<sp/></highlight><highlight class="stringliteral">&quot;UTC&quot;</highlight><highlight class="normal">))},</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight><highlight class="stringliteral">&quot;TimestampNs&quot;</highlight><highlight class="normal">,<sp/>Literal::TimestampNs(1672531200000000000),</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::TimestampScalar&gt;(</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1672531200000000000,</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::arrow::timestamp(::arrow::TimeUnit::NANO))},</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ToArrowScalarParam{</highlight><highlight class="stringliteral">&quot;TimestampTzNs&quot;</highlight><highlight class="normal">,<sp/>Literal::TimestampTzNs(1672531200000000000),</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_shared&lt;::arrow::TimestampScalar&gt;(</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1672531200000000000,</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::arrow::timestamp(::arrow::TimeUnit::NANO,<sp/></highlight><highlight class="stringliteral">&quot;UTC&quot;</highlight><highlight class="normal">))}),</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>[](const<sp/>::testing::TestParamInfo&lt;ToArrowScalarParam&gt;&amp;<sp/>info)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>info.param.test_name;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal">TEST(LiteralUtilTest,<sp/>NullLiteralBecomesNullScalar)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/>ICEBERG_UNWRAP_OR_FAIL(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>scalar,<sp/>ToArrowScalar(<ref refid="classiceberg_1_1Literal_1a44431a54eab3ee7b4373b8b13b70960c" kindref="member">Literal::Null</ref>(<ref refid="group__type-factories_1ga91f0688c58d168d755610a2b5a1a222e" kindref="member">iceberg::int32</ref>()),</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::arrow::default_memory_pool()));</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/>ASSERT_TRUE(scalar-&gt;type-&gt;Equals(*::arrow::int32()));</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>ASSERT_FALSE(scalar-&gt;is_valid);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal">TEST(LiteralUtilTest,<sp/>SentinelLiteralsAreRejected)<sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Casting<sp/>to<sp/>a<sp/>narrower<sp/>type<sp/>may<sp/>produce<sp/>AboveMax/BelowMin<sp/>sentinels;<sp/>they<sp/>have</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>no<sp/>value<sp/>to<sp/>materialize.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/>ICEBERG_UNWRAP_OR_FAIL(</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>above_max,</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>Literal::Long(std::numeric_limits&lt;int64_t&gt;::max()).CastTo(<ref refid="group__type-factories_1ga91f0688c58d168d755610a2b5a1a222e" kindref="member">iceberg::int32</ref>()));</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/>ASSERT_TRUE(above_max.IsAboveMax());</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/>ASSERT_THAT(ToArrowScalar(above_max,<sp/>::arrow::default_memory_pool()),</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>IsError(ErrorKind::kNotSupported));</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal">TEST(LiteralUtilTest,<sp/>MakeDefaultArrayFillsAllRows)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/>ICEBERG_UNWRAP_OR_FAIL(</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>array,<sp/>MakeDefaultArray(Literal::Int(7),<sp/>::arrow::int32(),<sp/></highlight><highlight class="comment">/*num_rows=*/</highlight><highlight class="normal">3,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::arrow::default_memory_pool()));</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>ASSERT_EQ(array-&gt;length(),<sp/>3);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/>ASSERT_EQ(array-&gt;null_count(),<sp/>0);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>int_array<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">::arrow::Int32Array&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(*array);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>3;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_EQ(int_array.Value(i),<sp/>7);</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal">TEST(LiteralUtilTest,<sp/>MakeDefaultArrayCastsToTargetType)<sp/>{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>target<sp/>Arrow<sp/>type<sp/>prevails<sp/>when<sp/>it<sp/>differs<sp/>from<sp/>the<sp/>literal&apos;s<sp/>natural<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/>ICEBERG_UNWRAP_OR_FAIL(</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>array,<sp/>MakeDefaultArray(Literal::Int(7),<sp/>::arrow::int64(),<sp/></highlight><highlight class="comment">/*num_rows=*/</highlight><highlight class="normal">2,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::arrow::default_memory_pool()));</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/>ASSERT_TRUE(array-&gt;type()-&gt;Equals(*::arrow::int64()));</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>long_array<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">::arrow::Int64Array&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(*array);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/>ASSERT_EQ(long_array.Value(0),<sp/>7);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal">TEST(LiteralUtilTest,<sp/>MakeDefaultArrayWrapsExtensionType)<sp/>{</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>An<sp/>Iceberg<sp/>UUID<sp/>maps<sp/>to<sp/>the<sp/>`arrow.uuid`<sp/>extension<sp/>type<sp/>(storage<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>fixed_size_binary(16)).<sp/>compute::Cast<sp/>cannot<sp/>target<sp/>an<sp/>extension<sp/>type,<sp/>so<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>default<sp/>array<sp/>must<sp/>be<sp/>built<sp/>as<sp/>the<sp/>storage<sp/>type<sp/>and<sp/>wrapped<sp/>in<sp/>the<sp/>extension<sp/>type.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="group__type-factories_1gafcf0f5e6522390678b91a9515b174bcf" kindref="member">uuid</ref><sp/>=<sp/><ref refid="classiceberg_1_1Uuid_1ac1b2a8703d0041b88cbcfa84e4a9a1a1" kindref="member">Uuid::FromBytes</ref>(kUuidBytes).value();</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/>ICEBERG_UNWRAP_OR_FAIL(</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>array,<sp/>MakeDefaultArray(Literal::UUID(<ref refid="group__type-factories_1gafcf0f5e6522390678b91a9515b174bcf" kindref="member">uuid</ref>),<sp/>::arrow::extension::uuid(),</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*num_rows=*/</highlight><highlight class="normal">3,<sp/>::arrow::default_memory_pool()));</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/>ASSERT_TRUE(array-&gt;type()-&gt;Equals(*::arrow::extension::uuid()));</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/>ASSERT_EQ(array-&gt;length(),<sp/>3);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/>ASSERT_EQ(array-&gt;null_count(),<sp/>0);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>extension_array<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">::arrow::ExtensionArray&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(*array);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>storage<sp/>=</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="normal">::arrow::FixedSizeBinaryArray&amp;</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(*extension_array.storage());</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(int64_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>3;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>ASSERT_EQ(storage.GetView(i),</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string_view(</highlight><highlight class="keyword">reinterpret_cast&lt;</highlight><highlight class="keyword">const<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(kUuidBytes.data()),</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>kUuidBytes.size()));</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>iceberg::arrow</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="iceberg/test/literal_util_test.cc"/>
+  </compounddef>
+</doxygen>
